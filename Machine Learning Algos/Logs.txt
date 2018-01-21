@@ -1,0 +1,154 @@
+> source('C:/Users/dverma/Desktop/dxv160430_Assignment5/Code.R')
+                Recency     Frequency      Monetary           Time          class
+Recency    1.0000000000 -0.1827454681 -0.1827454681  0.16061809418 -0.27986886744
+Frequency -0.1827454681  1.0000000000  1.0000000000  0.63494027032  0.21863344181
+Monetary  -0.1827454681  1.0000000000  1.0000000000  0.63494027032  0.21863344181
+Time       0.1606180942  0.6349402703  0.6349402703  1.00000000000 -0.03585440804
+class     -0.2798688674  0.2186334418  0.2186334418 -0.03585440804  1.00000000000
+[1] "Accuracy of Decision Tree :"
+[1] 0.7135135135
+[1] "ROC for Decision tree :"
+
+Call:
+roc.default(response = testDataset$class, predictor = as.numeric(predict))
+
+Data: as.numeric(predict) in 62 controls (testDataset$class 0) < 12 cases (testDataset$class 1).
+Area under the curve: 0.5
+[1] "Accuracy of Perceptron :"
+[1] 0.7027027027
+[1] "ROC for perceptron:"
+
+Call:
+roc.default(response = testDataset$class, predictor = as.numeric(predictions))
+
+Data: as.numeric(predictions) in 62 controls (testDataset$class 0) < 12 cases (testDataset$class 1).
+Area under the curve: 0.5
+[1] "Accuracy of Neural Network :"
+[1] 0.7027027027
+[1] "ROC for Neural Network"
+
+Call:
+roc.default(response = testDataset$class, predictor = as.numeric(predictions))
+
+Data: as.numeric(predictions) in 62 controls (testDataset$class 0) < 12 cases (testDataset$class 1).
+Area under the curve: 0.5
+[1] "Accuracy of SVM :"
+[1] 0.7027027027
+[1] "ROC for Support vector machine"
+
+Call:
+roc.default(response = testDataset$class, predictor = as.numeric(svmPrediction))
+
+Data: as.numeric(svmPrediction) in 62 controls (testDataset$class 0) < 12 cases (testDataset$class 1).
+Area under the curve: 0.5
+begin to train dbn ......
+training layer 1 rbm ...
+dbn has been trained.
+begin to train deep nn ......
+deep nn has been trained.
+begin to train dbn ......
+training layer 1 rbm ...
+dbn has been trained.
+begin to train deep nn ......
+deep nn has been trained.
+begin to train dbn ......
+training layer 1 rbm ...
+dbn has been trained.
+begin to train deep nn ......
+deep nn has been trained.
+begin to train dbn ......
+training layer 1 rbm ...
+dbn has been trained.
+begin to train deep nn ......
+deep nn has been trained.
+begin to train dbn ......
+training layer 1 rbm ...
+dbn has been trained.
+begin to train deep nn ......
+deep nn has been trained.
+[1] "Accuracy of Deep Learning :"
+[1] 0.8513513514
+[1] "ROC for Deep learning"
+
+Call:
+roc.default(response = testDataset$class, predictor = as.numeric(predictions))
+
+Data: as.numeric(predictions) in 62 controls (testDataset$class 0) < 12 cases (testDataset$class 1).
+Area under the curve: 0.5
+[1] "Accuracy of Naive Bayes :"
+[1] 0.6972972973
+[1] "ROC for Naive bayes"
+
+Call:
+roc.default(response = testDataset$class, predictor = as.numeric(nbPrediction))
+
+Data: as.numeric(nbPrediction) in 62 controls (testDataset$class 0) < 12 cases (testDataset$class 1).
+Area under the curve: 0.4919355
+[1] "Accuracy of Logistic regression :"
+[1] 0.7081081081
+[1] "ROC for Logistic regression"
+
+Call:
+roc.default(response = testDataset$class, predictor = as.numeric(pred))
+
+Data: as.numeric(pred) in 62 controls (testDataset$class 0) < 12 cases (testDataset$class 1).
+Area under the curve: 0.5
+[1] "Accuracy of KNN :"
+[1] 1
+[1] "ROC for K-nearest neighbors"
+
+Call:
+roc.default(response = testDataset$class, predictor = as.numeric(knnModel))
+
+Data: as.numeric(knnModel) in 62 controls (testDataset$class 0) < 12 cases (testDataset$class 1).
+Area under the curve: 1
+[1] "Accuracy of Ada Boosting :"
+[1] 0.6756756757
+[1] "ROC for ADA Boosting"
+
+Call:
+roc.default(response = testDataset$class, predictor = as.numeric(pred$class))
+
+Data: as.numeric(pred$class) in 62 controls (testDataset$class 0) < 12 cases (testDataset$class 1).
+Area under the curve: 0.4919355
+[1] "Accuracy of Random Forest :"
+[1] 0.6972972973
+[1] "ROC for Random Forest"
+
+Call:
+roc.default(response = testDataset$class, predictor = as.numeric(pred))
+
+Data: as.numeric(pred) in 62 controls (testDataset$class 0) < 12 cases (testDataset$class 1).
+Area under the curve: 0.5
+[1]	train-rmse:0.630899 
+[2]	train-rmse:0.519381 
+[1]	train-rmse:0.649284 
+[2]	train-rmse:0.532163 
+[1]	train-rmse:0.662806 
+[2]	train-rmse:0.542961 
+[1]	train-rmse:0.662043 
+[2]	train-rmse:0.541827 
+[1]	train-rmse:0.668085 
+[2]	train-rmse:0.547761 
+[1] "Accuracy of Gradient boosting :"
+[1] 0.6459459459
+[1] "ROC for Gradient Boosting"
+
+Call:
+roc.default(response = testDataset$class, predictor = as.numeric(pred))
+
+Data: as.numeric(pred) in 62 controls (testDataset$class 0) < 12 cases (testDataset$class 1).
+Area under the curve: 0.4919355
+[1] "Accuracy of Bagging :"
+[1] 0.7
+[1] "ROC for Bagging"
+
+Call:
+roc.default(response = testDataset$class, predictor = as.numeric(pred))
+
+Data: as.numeric(pred) in 62 controls (testDataset$class 0) < 12 cases (testDataset$class 1).
+Area under the curve: 0.5
+Warning messages:
+1: algorithm did not converge in 3 of 5 repetition(s) within the stepmax 
+2: algorithm did not converge in 1 of 5 repetition(s) within the stepmax 
+3: algorithm did not converge in 1 of 5 repetition(s) within the stepmax 
